@@ -11,12 +11,6 @@ export const useUsersStore = defineStore("users", () => {
   const isLoading = ref(false)
   const selectedJwt = ref(0)
 
-  // const promise = new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(jwts[selectedJwt.value])
-  //   }, 2000)
-  // })
-
   async function getJwtToken() {
     const promise = new Promise((resolve) => {
       setTimeout(() => {
