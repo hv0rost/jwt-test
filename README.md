@@ -1,9 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# Базовое разграничение прав в приложении, исходя из данных, которые зашиты в токен
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+На начальном экране есть выбор токена, для проверки прав:
+  1) Все права
+  2) Все права для 1 и 2 страницы
+  3) Все права для 1 страницы
+  4) Права на просмотр трех страницы с ограничением на просмотры компонентов
+  5) Все права для 1 и 2 страниц, некоторые компоненты ограничены только просмотром
+  6) Токен с большим количеством прав (проверяются только базовы)
 
-## Recommended Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+В /src/models/permissons.ts можно посмотреть структуру хранимых в jwt данных
