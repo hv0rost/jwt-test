@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router"
+import { RouteRecordRaw, createMemoryHistory, createRouter } from "vue-router"
 
 import { useUsersStore } from "../store/user"
 import { storeToRefs } from "pinia"
@@ -34,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory("/jwt-test/"),
+  history: createMemoryHistory(),
   routes,
   scrollBehavior(_to, _from, savedPosition) {
     return savedPosition || { left: 0, top: 0 }
