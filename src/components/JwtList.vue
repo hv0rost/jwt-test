@@ -19,7 +19,7 @@ async function selectNewToken(index: number) {
       <button @click="selectNewToken(index)">set jwt {{ index + 1 }}</button>
     </div>
   </div>
-  <div style="text-align: center">
+  <div class="current-jwt">
     {{ "current jwt: " + (selectedJwt + 1) }}
   </div>
 </template>
@@ -42,5 +42,10 @@ button {
 
 button:hover {
   outline: 1px solid #000;
+}
+
+.current-jwt {
+  text-align: center;
+  font-weight: bold;
 }
 </style>
